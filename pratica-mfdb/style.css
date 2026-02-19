@@ -1,0 +1,71 @@
+/* para mobile first */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+    font-size: 1.3em;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background: url(img/back-phone.jpg) no-repeat center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(240, 248, 255, 0.85);
+}
+
+.mensagens {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.msgphone {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    font-size: 0.6em;
+}
+
+.mensagens p {
+    width: 100%;
+    font-size: 0.9em;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+img#phone {display: block;}
+img#tablet {display: none;}
+img#print {display: none;}
+img#pc {display: none;}
+img#tv {display: none;}
+
+.msgphone {display: block;}
+.msgtablet {display: none;}
+.msgpc {display: none;}
+.msgtv {display: none;}

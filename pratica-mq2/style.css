@@ -1,0 +1,135 @@
+@media all {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        color: rgb(58, 58, 58);
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.863);
+        padding: 10px;
+    }
+
+    #mensagem {
+        padding: 10px;
+        font-size: 18px;
+        color: rgb(75, 74, 74);
+    }
+
+    #bairro {
+    position: fixed;
+    inset: 0;
+
+    background-image: url(img/bairro.jpg);
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+
+    display: none;
+}
+
+    #bairro::after {
+        color: rgb(58, 58, 58);
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.863);
+        font-size: 18px;
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+        content: 'Esse será seu bairro:';
+    }
+
+    #bairro:target {
+    display: block;
+    }
+
+    a {
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    }
+
+    a:hover {
+        transform: translateX(-50%) scale(1.15);
+    }
+
+    .botao {
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+    }
+
+
+}
+/* configurações para retrato */
+@media screen and (orientation: portrait) {
+    body {
+        background-image: url(img/casa.jpg);
+        background-position: center bottom;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #mensagem {
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #mensagem::after {
+        content: 'Em devlândia essa será a sua casa:';
+    }
+
+    #bairro{
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+/* configurações para paisagem */
+@media screen and (orientation: landscape) {
+    body {
+        background-image: url(img/cidadegrande.jpg);
+        background-position: left bottom;
+    }
+
+    #mensagem {
+        background-color: rgb(58, 58, 58);
+        color: darkgray;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.863);
+        margin: 10px;
+        padding: 10px;
+        width: 550px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    #mensagem::after {
+        content: 'Essa é a devlândia...Ela tem em torno de 100 mil habitantes.';
+    }
+
+    a > img {
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        padding: 12px 25px;
+    }
+
+}
