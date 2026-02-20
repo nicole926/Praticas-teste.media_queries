@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <title>MQ + JS</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Explorando o Mundo do Front-End</h1>
+
+        <div id="menu">
+            <span class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        </div>
+
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Projetos</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>O que é Front-End?</h2>
+
+            <p>Front-end é a parte do desenvolvimento web responsável por tudo aquilo que o usuário vê e interage dentro de um site. É onde cores, textos, imagens, botões e animações 
+                ganham vida e se organizam de forma harmônica na tela. Quando acessamos uma página na internet e clicamos em menus, preenchemos formulários ou navegamos entre seções, 
+                estamos interagindo diretamente com o trabalho feito por quem desenvolve o front-end.</p>
+
+                <img src="lógica-de-prog.png">
+
+            <p>Para construir essa parte visual, o desenvolvedor utiliza principalmente três tecnologias fundamentais: HTML, CSS e JavaScript. O HTML estrutura o conteúdo, o CSS estiliza 
+                e organiza o layout, enquanto o JavaScript adiciona interatividade e dinamismo. Juntas, essas tecnologias permitem criar experiências modernas, responsivas e agradáveis, 
+                adaptadas para diferentes tamanhos de tela como celulares, tablets e computadores.</p>
+
+            <p>Mais do que apenas deixar um site bonito, o front-end também envolve usabilidade e acessibilidade. É importante garantir que as informações sejam fáceis de encontrar, que 
+                o design seja intuitivo e que todas as pessoas consigam utilizar o site sem dificuldades. Por isso, estudar front-end significa aprender a unir criatividade, lógica e 
+                organização para transformar ideias em interfaces funcionais e eficientes.</p>
+        </article>
+    </main>
+
+    <script>
+        function mudouTamanho(){
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu(){
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            }
+
+            else {
+                itens.style.display  = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
